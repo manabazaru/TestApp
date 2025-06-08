@@ -1,0 +1,7 @@
+-- DB スキーマ定義（MySQL 8+ / utf8mb4）
+CREATE TABLE IF NOT EXISTS user(
+  id        BIGINT       AUTO_INCREMENT PRIMARY KEY,
+  name      VARCHAR(100) NOT NULL,
+  email     VARCHAR(255) UNIQUE,
+  created_at TIMESTAMP   DEFAULT CURRENT_TIMESTAMP
+);

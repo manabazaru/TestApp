@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+</head>
+<body>
+  <h2>Welcome to Home!</h2>
+
+  <form th:action="@{/home}" method="post">
+    <input type="text" name="message" placeholder="Enter something" />
+    <button type="submit">Send</button>
+  </form>
+
+  <div th:if="${message}">
+    <p>You entered: <b th:text="${message}"></b></p>
+  </div>
+
+  <p><a th:href="@{/logout}">Logout</a></p>
+</body>
+</html>

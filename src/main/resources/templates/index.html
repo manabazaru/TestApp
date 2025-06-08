@@ -1,0 +1,276 @@
+<!-- src/main/resources/templates/index.html -->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${pageTitle}">サンプルページ</title>
+
+    <!-- Spring Boot では static/ 以下が / ルートにマッピングされる -->
+    <link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header_left">
+                <!--画像ファイルの位置確認お願いします。また矢上祭のトップページも確認してくれるとありがたいです-->
+                <a href="https://yagamifestival.com/">
+                    <img src="boardgame_yagami_logo.png" alt="矢上top">
+                </a>
+            </div>
+            <div class="header_right">
+            <!--URL先の確認をお願いします-->
+                <a href="#top">TOP</a>
+                <a href="#join">JOIN</a>
+                <a href="#game_list">GAME LIST</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+            <div class="clear"></div>
+        </div> 
+    </div>
+    <div class="top_image_wrap"  id="top">
+        <div class="top_image">
+            <img src="boardgame_top.png" alt="BOARD GAME ONLINE">
+        </div>
+    </div>
+    <div class="main">
+        <div class="section_wrap">
+            <div class="section_title_wrap">
+                <div class="section_title">
+                    <h1>慶應生とボードゲームで遊ぼう！</h1>
+                </div>
+            </div>
+            <div class="text_content">
+                <p>　こんにちは、矢上祭実行委員会です。ここでは、矢上祭当日(9/26)にZoomを利用してオンラインでボードゲーム対戦をする企画です！ワンナイト人狼などの定番ゲームやAmong Usといったはやりのゲームで遊ぶことができます。当日の飛び入り参加も大歓迎！興味のある方はぜひご参加ください！</p>
+            </div>
+        </div>
+        <div class="section_wrap">
+            <div class="anchor" id="join"></div>
+            <div class="section_title_wrap">
+                <div class="section_title">
+                    <h1>参加するには？</h1>
+                </div>
+            </div>
+            <div class="text_content">
+                <p>　参加方法としては、予約参加と当日参加があります。予約は3つの時間帯から選ぶことができます。</p>
+            </div>
+            <div class="reserve">
+                <div class="boxes_wrapper">
+                    <div class="box_wrapper">
+                        <div class="box_title">
+                            <h1>13:00~14:00</h1>
+                        </div>
+                        <div class="box_content">
+                            <div class="box_text">
+                                <p>遊べるゲーム:<br>プラン1(ワンナイト人狼＋インサイダー)
+                                <br>プラン2(Just One＋コードネーム)
+                                </p>
+                            </div>
+                            <div class="button">
+                            <!--確認お願いします。-->
+                                <a href="https://docs.google.com/forms/d/12a56cql4ZkIQM6YRFE735J6Fami6tLzUX58kPmBaspc/edit" target=_blank class="reserve_button">
+                                    <h1>予約する</h1>
+                                </a>
+                                <a href="https://zoom.us/j/94340605578?pwd=V0V5NmhIK2RzWnlSeWlmV3NhWjgwZz09" target=_blank class="join_button">
+                                    <h1>予約した方は<br>当日こちらへ</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_wrapper">
+                        <div class="box_title">
+                            <h1>14:30~15:30</h1>
+                        </div>
+                        <div class="box_content">
+                            <div class="box_text">
+                                <p>遊べるゲーム:<br>プラン3(Among Us)</p>
+                            </div>
+                            <div class="button">
+                            <!--確認お願いします-->
+                                <a href="https://docs.google.com/forms/d/12a56cql4ZkIQM6YRFE735J6Fami6tLzUX58kPmBaspc/edit" target=_blank class="reserve_button">
+                                    <h1>予約する</h1>
+                                </a>
+                                <a href="https://zoom.us/j/94340605578?pwd=V0V5NmhIK2RzWnlSeWlmV3NhWjgwZz09" target=_blank class="join_button">
+                                    <h1>予約した方は<br>当日こちらへ</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_wrapper">
+                        <div class="box_title">
+                            <h1>16:00~17:00</h1>
+                        </div>
+                        <div class="box_content">
+                            <div class="box_text">
+                                <p>遊べるゲーム:<br>プラン1(ワンナイト人狼＋インサイダー)
+                                <br>プラン2(Just One＋コードネーム)
+                                </p>
+                            </div>
+                            <div class="button">
+                            <!--確認お願いします-->
+                                <a href="https://docs.google.com/forms/d/12a56cql4ZkIQM6YRFE735J6Fami6tLzUX58kPmBaspc/edit" target=_blank class="reserve_button">
+                                    <h1>予約する</h1>
+                                </a>
+                                <a href="https://zoom.us/j/94340605578?pwd=V0V5NmhIK2RzWnlSeWlmV3NhWjgwZz09" target=_blank class="join_button">
+                                    <h1>予約した方は<br>当日こちらへ</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text_content">
+                <p>予約をしてない場合でも、矢上祭本祭期間中であればいつでも参加することができます。ただし、Among Usなどの一部ゲームは遊ぶことができません。</p>
+            </div>
+            <div class="non-reserve">
+                <div class="box_wrapper">
+                    <div class="box_title">
+                        <h1>矢上祭期間中</h1>
+                    </div>
+                    <div class="box_content">
+                        <div class="box_text">
+                            <p>遊べるゲーム:<br>ワンナイト人狼<br>インサイダー<br>コードネーム<br>Just One<br>マーダーミステリー</p>                 
+                        </div>
+                        <div class="button">
+                        <!--確認お願いします-->
+                            <a href="https://zoom.us/j/94340605578?pwd=V0V5NmhIK2RzWnlSeWlmV3NhWjgwZz09" target=_blank class="non-reserve_button">
+                                <h1>当日参加する</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section_wrap">
+            <div class="anchor" id="game_list"></div>
+            <div class="section_title_wrap">
+                <div class="section_title">
+                    <h1>ゲームの種類</h1>
+                </div>
+            </div>
+            <div class="text_content">
+                <p>　今回遊ぶ機会があるゲームは全部で6種類です。</p>
+            </div>
+            <div class="boxes_wrapper">
+                <div class="box_wrapper">
+                    <div class="box_title">
+                        <h1>ワンナイト人狼</h1>
+                    </div>
+                    <div class="box_content">
+                        <div class="picture_wrap">
+                            <!--確認お願いします。-->
+                            <img src="one_night.jpg" alt="ワンナイト人狼">
+                        </div>
+                        <div class="button">
+                            <!--確認お願いします。-->
+                            <a href="boardgame_one_night.html" class="game_button">
+                                <h1>詳細</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_wrapper">
+                    <div class="box_title">
+                        <h1>Just One</h1>
+                    </div>
+                    <div class="box_content">
+                        <div class="picture_wrap">
+                            <!--確認お願いします。-->
+                            <img src="just_one.jpg" alt="Just One">
+                        </div>
+                        <div class="button">
+                            <!--確認お願いします。-->
+                            <a href="boardgame_just_one.html" class="game_button">
+                                <h1>詳細</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_wrapper">
+                    <div class="long_box_title">
+                        <h1 class="long-name">マーダーミステリー</h1>
+                    </div>
+                    <div class="box_content">
+                        <div class="picture_wrap">
+                            <!--確認お願いします。-->
+                            <img src="murder_mystery.jpg" alt="マーダーミステリー">
+                        </div>
+                        <div class="button">
+                            <!--確認お願いします。-->
+                            <a href="boardgame_murder_mystery.html" class="game_button">
+                                <h1>詳細</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_wrapper">
+                    <div class="box_title">
+                        <h1>Among Us</h1>
+                    </div>
+                    <div class="box_content">
+                        <div class="picture_wrap">
+                            <!--確認お願いします。-->
+                            <img src="among_us.jpg" alt="Among Us">
+                        </div>
+                        <div class="button">
+                            <!--確認お願いします。-->
+                            <a href="boardgame_among_us.html" class="game_button">
+                                <h1>詳細</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_wrapper">
+                    <div class="box_title">
+                        <h1>コードネーム</h1>
+                    </div>
+                    <div class="box_content">
+                        <div class="picture_wrap">
+                            <!--確認お願いします。-->
+                            <img src="code_name.jpg" alt="コードネーム">
+                        </div>
+                        <div class="button">
+                            <!--確認お願いします。-->
+                            <a href="boardgame_code_name.html" class="game_button">
+                                <h1>詳細</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_wrapper">
+                    <div class="long_box_title">
+                        <h1>インサイダーゲーム</h1>
+                    </div>
+                    <div class="box_content">
+                        <div class="picture_wrap">
+                            <!--確認お願いします。-->
+                            <img src="insider.jpg" alt="インサイダーゲーム">
+                        </div>
+                        <div class="button">
+                            <!--確認お願いします。-->
+                            <a href="boardgame_insider.html" class="game_button">
+                                <h1>詳細</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section_wrap">
+            <div class="anchor" id="contact"></div>
+            <div class="section_title_wrap">
+                <div class="section_title">
+                    <h1>お問い合わせ</h1>
+                </div>
+            </div>
+            <div class="text_content">
+                <p>　もしわからないことがありましたら、お気軽に<br><br>22nd.boardgame@gmail.com<br><br>までお問い合わせください。</p>
+            </div>      
+        </div>             
+    </div>
+	<div class="footer">
+        <div class="footer_inner">
+            <p>Copyright &copy; 2021 Yagami Festival Committee All rights reserved.</p>
+        </div>
+	</div>
+</body>
+</html>
