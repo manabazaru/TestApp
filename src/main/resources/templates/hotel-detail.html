@@ -1,0 +1,184 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="ja">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <title>新規会員登録</title>-->
+<!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"-->
+<!--        rel="stylesheet"-->
+<!--        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"-->
+<!--        crossorigin="anonymous">-->
+<!--  <style>-->
+<!--	.bg01 {-->
+<!--	  background: -->
+<!--	    #A5BFE0                     /* 下地色 */-->
+<!--	    url(images/background_top.jpg) no-repeat top left  /* 画像 */-->
+<!--	    / 100% auto;                /* サイズ */-->
+<!--	}-->
+
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--	<nav class="navbar navbar-expand-md navbar-light bg-body-tertiary">-->
+<!--	  <div class="container">-->
+<!--	    <a class="navbar-brand" href="#">-->
+<!--			<img src="images/logo.png" alt="Bootstrap" width="140" height="30">-->
+<!--		</a>-->
+<!--	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--	      <span class="navbar-toggler-icon"></span>-->
+<!--	    </button>-->
+<!--	    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--	      <ul class="navbar-nav ms-auto mb-0 mb-lg-0">-->
+<!--	        <li class="nav-item fs-5">-->
+<!--	          <a class="nav-link" href="#">Top</a>-->
+<!--	        </li>-->
+<!--	        <li class="nav-item fs-5">-->
+<!--	          <a class="nav-link" href="#">Profile</a>-->
+<!--	        </li>-->
+<!--			<li class="nav-item fs-5">-->
+<!--				<a class="nav-link" href="#">Cart</a>-->
+<!--			</li>-->
+<!--			<li class="nav-item fs-5">-->
+<!--				<a class="nav-link" href="#">Logout</a>-->
+<!--			</li>-->
+<!--	    </div>-->
+<!--	  </div>-->
+<!--	</nav>-->
+<!--<div class="container-fluid mb-3 bg01 d-flex flex-column align-items-center">-->
+<!--	<div class="title text-white mt-5">-->
+<!--		<h1>ホテル詳細</h1>-->
+<!--		</div>-->
+<!--</div>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ホテル詳細</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+  <style>
+    .bg01 {
+      background:
+        #A5BFE0
+        url(images/background_top.jpg) no-repeat top left
+        / 100% auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <nav class="navbar navbar-expand-md navbar-light bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Bootstrap" width="140" height="30">
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
+          <li class="nav-item fs-5"><a class="nav-link" href="#">Top</a></li>
+          <li class="nav-item fs-5"><a class="nav-link" href="#">Profile</a></li>
+          <li class="nav-item fs-5"><a class="nav-link" href="#">Cart</a></li>
+          <li class="nav-item fs-5"><a class="nav-link" href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ページタイトル -->
+  <div class="container-fluid bg01 py-5 d-flex justify-content-center">
+    <h1 class="text-white">ホテル詳細</h1>
+  </div>
+
+  <!-- 詳細情報 -->
+  <div class="container my-5 w-75 mx-auto bg-white bg-opacity-75 p-4 rounded shadow">
+    <dl class="row">
+      <dt class="col-sm-4">ホテルコード</dt>
+      <dd class="col-sm-8">H001</dd>
+
+      <dt class="col-sm-4">ホテル名</dt>
+      <dd class="col-sm-8">ホテル東京ステーション</dd>
+
+      <dt class="col-sm-4">チェックイン日</dt>
+      <dd class="col-sm-8">2025-07-01</dd>
+
+      <dt class="col-sm-4">チェックアウト日</dt>
+      <dd class="col-sm-8">2025-07-03</dd>
+
+      <dt class="col-sm-4">都市名</dt>
+      <dd class="col-sm-8">東京</dd>
+
+      <dt class="col-sm-4">部屋数</dt>
+      <dd class="col-sm-8">2</dd>
+
+      <dt class="col-sm-4">一泊／一部屋当たりの料金</dt>
+      <dd class="col-sm-8">¥12,000</dd>
+    </dl>
+
+	<!-- カートに登録ボタン -->
+	<div class="d-flex justify-content-center gap-3 mt-4">
+	  <a href="javascript:history.back()" class="btn btn-outline-secondary">
+	    戻る
+	  </a>
+	  <!-- ここをモーダルトリガーに変更 -->
+	  <button type="button"
+	          class="btn btn-primary"
+	          data-bs-toggle="modal"
+	          data-bs-target="#cartModal">
+	    カートに登録
+	  </button>
+	</div>
+
+	<!-- モーダル本体 -->
+	<div class="modal fade" 
+	     id="cartModal" 
+	     tabindex="-1" 
+	     aria-labelledby="cartModalLabel" 
+	     aria-hidden="true"
+	+    data-bs-backdrop="static"
+	+    data-bs-keyboard="false">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+
+
+	      <div class="modal-body text-center">
+	        <img src="images/cart_icon.png" alt="カート登録完了" class="mb-3" style="width: 64px; height: 64px;">
+	        <p class="h5 mb-0">カートに登録しました</p>
+	      </div>
+	      <div class="modal-footer justify-content-center border-0">
+	        <button type="button"
+	                class="btn btn-outline-secondary"
+	                data-bs-dismiss="modal">
+	          買い物を続ける
+	        </button>
+	        <a href="/cart" class="btn btn-primary">
+	          ショッピングカートへ
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</body>
+</html>

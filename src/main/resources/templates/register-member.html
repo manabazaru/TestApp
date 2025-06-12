@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新規会員登録</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+  <style>
+    .bg01 {
+      background: url(images/background_top.jpg) no-repeat top left;
+      background-size: 100% auto;
+    }
+    .login-form {
+      max-width: 450px;
+      width: 100%;
+      background-color: rgba(255,255,255,0.75);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Bootstrap" width="140" height="30">
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid bg01">
+  <div class="row vh-100 justify-content-center">
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+      <form class="login-form">
+        <h2 class="mb-4 text-center">新規会員登録</h2>
+
+        <!-- Floating Labels の例 -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingMemberCode" placeholder="会員コード">
+          <label for="floatingMemberCode">メンバーコード</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingEmail" placeholder="you@example.com">
+          <label for="floatingEmail">メールアドレス</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingName" placeholder="山田 太郎">
+          <label for="floatingName">お名前</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control" id="floatingPhone" placeholder="09012345678">
+          <label for="floatingPhone">電話番号</label>
+        </div>
+
+        <div class="form-floating mb-4">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">パスワード</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">確認</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

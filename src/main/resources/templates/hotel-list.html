@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新規会員登録</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+  <style>
+	.bg01 {
+	  background: 
+	    #A5BFE0                     /* 下地色 */
+	    url(images/background_top.jpg) no-repeat top left  /* 画像 */
+	    / 100% auto;                /* サイズ */
+	}
+    .login-form {
+      max-width: 450px;
+      width: 100%;
+      background-color: rgba(255,255,255,0.75);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    }
+	.transparent-form {
+		max-width: 700px;
+	  background-color: rgba(255,255,255,0.75) !important;
+	}
+  </style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-light bg-body-tertiary">
+	  <div class="container">
+	    <a class="navbar-brand" href="#">
+			<img src="images/logo.png" alt="Bootstrap" width="140" height="30">
+		</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
+	        <li class="nav-item fs-5">
+	          <a class="nav-link" href="#">Top</a>
+	        </li>
+	        <li class="nav-item fs-5">
+	          <a class="nav-link" href="#">Profile</a>
+	        </li>
+			<li class="nav-item fs-5">
+				<a class="nav-link" href="#">Cart</a>
+			</li>
+			<li class="nav-item fs-5">
+				<a class="nav-link" href="#">Logout</a>
+			</li>
+	    </div>
+	  </div>
+	</nav>
+<div class="container-fluid mb-3 bg01 d-flex flex-column align-items-center">
+	<div class="title text-white mt-5">
+		<h1>ホテル検索</h1>
+		</div>
+	<div class="search-form">
+	<form class="row gx-3 align-items-end p-4 rounded shadow transparent-form">
+	  <!-- チェックイン -->
+	  <div class="col">
+	    <label for="checkin" class="form-label">チェックイン</label>
+	    <input type="date" class="form-control" id="checkin" name="checkin">
+	  </div>
+
+	  <!-- チェックアウト -->
+	  <div class="col">
+	    <label for="checkout" class="form-label">チェックアウト</label>
+	    <input type="date" class="form-control" id="checkout" name="checkout">
+	  </div>
+
+	  <!-- 都市 -->
+	  <div class="col">
+	    <label for="city" class="form-label">都市</label>
+	    <select id="city" name="city" class="form-select">
+	      <option value="">選択</option>
+	      <option value="tokyo">東京</option>
+	      <option value="osaka">大阪</option>
+	      <option value="kyoto">京都</option>
+	    </select>
+	  </div>
+
+	  <!-- 部屋数 -->
+	  <div class="col">
+	    <label for="rooms" class="form-label">部屋数</label>
+	    <input type="number"
+	           class="form-control"
+	           id="rooms"
+	           name="rooms"
+	           placeholder="1"
+	           min="1"
+	           step="1">
+	  </div>
+
+	  <!-- 検索ボタン -->
+	  <div class="col-auto">
+	    <button type="submit" class="btn btn-primary">
+	      検索
+	    </button>
+	  </div>
+	</form>
+	</div>
+	<div class="list-part mt-4 mb-3 w-75 mx-auto bg-white bg-opacity-75 p-4 rounded shadow">
+	  <h2 class="mb-3 text-center">検索結果</h2>
+	  <!-- 検索結果テーブルの直後に追加 -->
+	  <div class="d-flex justify-content-center my-3">
+	    <div class="btn-group" role="group" aria-label="日付オフセット切り替え">
+	      <input type="radio" class="btn-check" name="dayOffset" id="offset-m3" autocomplete="off">
+	      <label class="btn btn-outline-secondary btn-lg me-2" for="offset-m3">3日前</label>
+
+	      <input type="radio" class="btn-check" name="dayOffset" id="offset-m2" autocomplete="off">
+	      <label class="btn btn-outline-secondary btn-lg me-2" for="offset-m2">2日前</label>
+
+	      <input type="radio" class="btn-check" name="dayOffset" id="offset-m1" autocomplete="off">
+	      <label class="btn btn-outline-secondary btn-lg me-2" for="offset-m1">1日前</label>
+
+	      <input type="radio" class="btn-check" name="dayOffset" id="offset-0" autocomplete="off" checked>
+	      <label class="btn btn-outline-secondary btn-lg me-2" for="offset-0">チェックイン日</label>
+
+	      <input type="radio" class="btn-check" name="dayOffset" id="offset-p1" autocomplete="off">
+	      <label class="btn btn-outline-secondary btn-lg me-2" for="offset-p1">1日後</label>
+
+	      <input type="radio" class="btn-check" name="dayOffset" id="offset-p2" autocomplete="off">
+	      <label class="btn btn-outline-secondary btn-lg me-2" for="offset-p2">2日後</label>
+
+	      <input type="radio" class="btn-check" name="dayOffset" id="offset-p3" autocomplete="off">
+	      <label class="btn btn-outline-secondary btn-lg" for="offset-p3">3日後</label>
+	    </div>
+	  </div>
+
+	  <div class="table-responsive">
+	    <table class="table table-striped table-hover align-middlex">
+	      <thead class="table-light">
+	        <tr>
+	          <th scope="col">ホテルコード</th>
+	          <th scope="col">ホテル名</th>
+	          <th scope="col">都市</th>
+	          <th scope="col">金額</th>
+	          <th scope="col"></th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <td>H001</td>
+	          <td>ホテル東京ステーション</td>
+	          <td>東京</td>
+	          <td>¥12,000</td>
+	          <td>
+	            <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>H002</td>
+	          <td>大阪オフィスホテル</td>
+	          <td>大阪</td>
+	          <td>¥9,500</td>
+	          <td>
+	            <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>H003</td>
+	          <td>京都リバーサイド</td>
+	          <td>京都</td>
+	          <td>¥11,200</td>
+	          <td>
+	            <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+	          </td>
+	        </tr>
+			<tr>
+			  <td>H003</td>
+			  <td>京都リバーサイド</td>
+			  <td>京都</td>
+			  <td>¥11,200</td>
+			  <td>
+			    <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+			  </td>
+			</tr>
+			<tr>
+			  <td>H003</td>
+			  <td>京都リバーサイド</td>
+			  <td>京都</td>
+			  <td>¥11,200</td>
+			  <td>
+			    <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+			  </td>
+			</tr>
+			<tr>
+			  <td>H003</td>
+			  <td>京都リバーサイド</td>
+			  <td>京都</td>
+			  <td>¥11,200</td>
+			  <td>
+			    <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+			  </td>
+			</tr>
+			<tr>
+			  <td>H003</td>
+			  <td>京都リバーサイド</td>
+			  <td>京都</td>
+			  <td>¥11,200</td>
+			  <td>
+			    <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+			  </td>
+			</tr>
+			<tr>
+			  <td>H003</td>
+			  <td>京都リバーサイド</td>
+			  <td>京都</td>
+			  <td>¥11,200</td>
+			  <td>
+			    <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+			  </td>
+			</tr>
+			<tr>
+			  <td>H003</td>
+			  <td>京都リバーサイド</td>
+			  <td>京都</td>
+			  <td>¥11,200</td>
+			  <td>
+			    <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+			  </td>
+			</tr>
+			<tr>>
+			  <td>H003</td>
+			  <td>京都リバーサイド</td>
+			  <td>京都</td>
+			  <td>¥11,200</td>
+			  <td>
+			    <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+			  </td>
+			</tr>
+			<tr>
+			  <td>H003</td>
+			  <td>京都リバーサイド</td>
+			  <td>京都</td>
+			  <td>¥11,200</td>
+			  <td>
+			    <a href="#" class="btn btn-outline-secondary btn-sm">詳細</a>
+			  </td>
+			</tr>
+	        <!-- 追加の行も同様に -->
+	      </tbody>
+	    </table>
+	  </div>
+	  <!-- ページングナビ -->
+<!--	  < <ul class="pagination junav aria-label="検索結果ページング">-->
+<!--	   stify-content-center mb-0">-->
+<!--	       「前へ」はページ1では無効化 -->
+<!--	      <li class="page-item disabled">-->
+<!--	        <a class="page-link" href="#" tabindex="-1">前へ</a>-->
+<!--	      </li>-->
+<!--	      <li class="page-item active "><a class="page-link" href="#">1</a></li>-->
+<!--	      <li class="page-item"><a class="page-link" href="#">2</a></li>-->
+<!--	      <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+<!--	      <li class="page-item">-->
+<!--	        <a class="page-link" href="#">次へ</a>-->
+<!--	      </li>-->
+<!--	    </ul>-->
+<!--	  </nav>-->
+	</div>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

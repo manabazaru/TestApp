@@ -1,0 +1,46 @@
+/* ナビバーの軽い影 */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* バナー */
+.banner {
+  position: relative;
+  background: url("../images/banner.jpg") no-repeat center/cover;
+  height: 300px;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 123, 255, 0.7);
+}
+.banner-text {
+  position: relative;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* アイコンカード */
+.icon-section {
+  padding: 3rem 0;
+}
+.icon-card {
+  display: block;
+  border: 3px solid #000;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+.icon-card img {
+  max-width: 100%;
+  height: auto;
+}
+.icon-card .card-title {
+  margin-top: 1rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #000;
+}
